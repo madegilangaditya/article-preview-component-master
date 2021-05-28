@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/mobile-first-workflow-css-grid-css-flexbox-vanilla-js-vRbW-rs0I](https://www.frontendmentor.io/solutions/mobile-first-workflow-css-grid-css-flexbox-vanilla-js-vRbW-rs0I)
 - Live Site URL: [https://madegilangaditya.github.io/article-preview-component-master/](https://madegilangaditya.github.io/article-preview-component-master/)
 
 ## My process
