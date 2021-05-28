@@ -1,0 +1,132 @@
+$primary-font:'Manrope', sans-serif;
+$font-color1: hsl(217, 19%, 35%);
+$font-color2: hsl(214, 17%, 51%);
+$font-color3: hsl(212, 23%, 69%);
+$font-color4: hsl(210, 46%, 95%);
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 13px;
+    font-family: $primary-font;
+    font-weight: 500;
+}
+
+p{
+    font-size: 0.8125rem;
+    color: $font-color2;
+}
+img{
+    width: 100%;
+}
+.container{
+    max-width: 730px;
+    margin: auto;
+}
+
+.showcase{
+    min-height: 100vh;
+    padding: 74px 24px 17px;
+    background-color: $font-color4;
+
+    &-card{
+        display: grid;
+        border-radius: 10px;
+        background-color: #fff;
+        overflow: hidden;
+
+        .content-wrap{
+            padding: 40px 30px 20px;
+
+            h1{
+                margin-bottom: .75em;
+                font-size: 1rem;
+            }
+
+            .text-content{
+                margin-bottom: 30px;
+                letter-spacing: .27px;
+            }
+
+            .profile{
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                align-items: end;
+
+                .author{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                    img{
+                        width: 40px;
+                        border-radius: 50%;
+                        margin-right: 15px;
+                    }
+
+                    div{
+                        .name{
+                            font-weight: 700;
+                            color: $font-color1;
+                        }
+                        .date{
+                            color:$font-color3;
+                        }
+                    }
+                }
+                .share-btn{
+                    width: 32px;
+                    z-index: 1;
+                    height: 32px;
+                    margin-left: auto;
+                    border-radius: 50%;
+                    background: center / 50% no-repeat url(../images/icon-share.svg) $font-color4;
+                    cursor: pointer;
+                }
+                .share-btn:hover{
+                    background: center / 50% no-repeat url(../images/icon-share-o.svg) $font-color2;
+                }
+            }
+        }
+
+    }
+    .share-popup{
+        background-color: $font-color1;
+        padding: 20px 30px;
+        position: relative;
+        top: -64px;
+        border-radius: 0px 0px 10px 10px;
+        visibility: hidden;
+        opacity: .5;
+        transition: .5s linear;
+
+        ul{
+            display: flex;
+            gap: 20px;
+            li{
+                list-style-type: none;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: $font-color3;
+            }
+        }
+        
+    }
+    .share-popup.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .share-popup.desktop{
+        display: none;
+    }
+    .share-popup.mobile{
+        display: block;
+    }
+}
+
+@import 'responsive';
